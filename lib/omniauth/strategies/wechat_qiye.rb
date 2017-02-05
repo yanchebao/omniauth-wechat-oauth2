@@ -73,7 +73,7 @@ module OmniAuth
             'corpid' => client.id,
             'corpsecret' => client.secret,
         }.merge(token_params.to_hash(symbolize_keys: true))
-        client.get_token(params, deep_symbolize(options.auth_token_params.merge({code: code})))
+        client.get_token(params, deep_symbolize(options.token_params.merge({code: code})))
       end
     end
   end
