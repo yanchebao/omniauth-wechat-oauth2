@@ -1,5 +1,7 @@
 source "https://rubygems.org"
 
-gem "rake", "~> 0.9.6"
+gem "rake"
+gem 'pronto'
+gem 'pronto-rubocop', require: false
 
 gemspec
