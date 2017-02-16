@@ -4,6 +4,7 @@
 .config
 .ruby-version
 .ruby-gemset
+.rvmrc
 Gemfile.lock
 coverage
 InstalledFiles
