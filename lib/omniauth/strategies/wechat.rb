@@ -3,7 +3,7 @@ require 'omniauth-oauth2'
 module OmniAuth
   module Strategies
     class Wechat < OmniAuth::Strategies::OAuth2
-      option :name, 'wechat_mp'
+      option :name, 'wechat'
 
       option :client_options, site:          'https://api.weixin.qq.com',
                               authorize_url: 'https://open.weixin.qq.com/connect/oauth2/authorize#wechat_redirect',
@@ -15,11 +15,12 @@ module OmniAuth
       option :token_params, parse: :json
 
       uid do
-        raw_info['openid']
+        raw_info['unionid']
       end
 
       info do
         {
+          openid:     raw_info['openid'],
           nickname:   raw_info['nickname'],
           sex:        raw_info['sex'],
           province:   raw_info['province'],
