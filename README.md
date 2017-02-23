@@ -80,7 +80,10 @@ Here's an example of an authentication hash available in the callback by accessi
     }
 }
 ```
+Changes:
 
+remove qiye, add wechat_open  
+use uuid as default uid
 
 
 
